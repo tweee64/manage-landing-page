@@ -6,9 +6,57 @@ import {
   icon_pinterest,
   icon_twitter,
 } from "../assets";
+import React from "react";
+
+import { useState, useRef } from "react";
 import { styles } from "../styles";
 
 function Footer() {
+  const formRef = useRef();
+
+  const [form, setForm] = useState({
+    email: "",
+  });
+  const [errors, setErrors] = useState({
+    email: "",
+  });
+  // const [loading, setLoading] = useState(false);
+  const handleChange = (e) => {
+    console.log("handlechange");
+    const { name, value } = e.target;
+
+    setForm({ ...form, [name]: value });
+    setErrors({
+      ...errors,
+      [e.target.name]: "",
+    });
+  };
+
+  const validateForm = () => {
+    console.log("validate");
+    let valid = true;
+    const newErrors = {
+      email: "",
+    };
+
+    if (form.email.trim() === "") {
+      newErrors.email = "Email is required";
+      valid = false;
+    }
+
+    setErrors(newErrors);
+
+    return valid;
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // setLoading(true);
+    if (!validateForm()) {
+      // setLoading(false);
+      return;
+    }
+    alert("go");
+  };
   return (
     <div>
       <div className="bright-red footer-orange flex justify-around p-10">
@@ -45,17 +93,24 @@ function Footer() {
           <p className="p-1">Privacy Policy</p>
         </div>
         <div>
-          <form>
+          <form ref={formRef} onSubmit={handleSubmit}>
             <label>
               <input
                 className="rounded-2xl h-8 w-48 text-black text-sm pl-2"
-                type="text"
-                name="name"
                 placeholder="Updates in your inbox…
                 "
+                value={form.email}
+                onChange={handleChange}
+                type="text"
+                name="email"
               />
             </label>
-            <span className={`${styles.button} ml-5`}>Go</span>
+            <button type="submit" className={`${styles.button} ml-5`}>
+              Go
+            </button>
+            {errors.email && (
+              <div className=" pl-2 text-bright-red">{errors.email}</div>
+            )}
           </form>
         </div>{" "}
       </div>
