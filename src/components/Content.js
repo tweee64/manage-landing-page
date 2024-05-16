@@ -3,7 +3,6 @@ import {
   avatar_ali,
   avatar_anisha,
   avatar_richard,
-  avatar_shanai,
 } from "../assets";
 import { styles } from "../styles";
 function Content() {
