@@ -1,13 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "font-regular";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: "font-main";
+  src: url("./assets/fonts/Be_Vietnam_Pro/BeVietnamPro-Medium.ttf");
+}
+
+@font-face {
+  font-family: "font-light";
+  src: url("./assets/fonts//Be_Vietnam_Pro//BeVietnamPro-Light.ttf");
+}
+
+@font-face {
+  font-family: "font-regular";
+  src: url("./assets/fonts/Be_Vietnam_Pro/BeVietnamPro-Regular.ttf");
+}
+@font-face {
+  font-family: "font-extralight";
+  src: url("./assets/fonts/Be_Vietnam_Pro/BeVietnamPro-ExtraLight.ttf");
+}
+@font-face {
+  font-family: "font-bolded";
+  src: url("./assets/fonts/Be_Vietnam_Pro/BeVietnamPro-Bold.ttf");
+}
+
+.font-light {
+  font-family: "font-light";
+}
+.extra-light {
+  font-family: "font-extralight";
+}
+.font-bolded {
+  font-family: "font-bolded";
+}
+.content {
+  padding: 30px 70px 30px 70px;
+  margin: 30px 60px 30px 60px;
+}
+.card {
+  padding: 20px;
+  width: 400;
+  height: 200px;
+  background-color: hsl(0, 0%, 98%);
+  text-align: center;
+  position: relative;
+}
+.profile-pic {
+  position: absolute;
+  top: -25px;
+  left: 210px;
+  width: 50px;
+  height: 50px;
+}
+.footer-orange {
+  height: 170px;
+}
+.footer-black {
+  background-color: hsl(233, 12%, 13%);
+  height: 170px;
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+}
+.dark-blue {
+  color: hsl(228, 39%, 23%);
+}
+.nav-text-bar {
+  font-family: "font-bolded";
+}
+.nav-bar-text:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+.bright-red {
+  background-color: hsl(12, 88%, 59%);
+}
+.text-bright-red {
+  color: hsl(12, 88%, 59%);
+}
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
