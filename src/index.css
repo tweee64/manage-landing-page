@@ -80,9 +80,18 @@ body {
   color: gray;
   cursor: pointer;
 }
+.side-nav {
+  z-index: 99;
+}
 
+.nav-links:hover::after {
+  width: 70%;
+}
 .bright-red {
   background-color: hsl(12, 88%, 59%);
+}
+.light-red {
+  background-color: hsl(12, 88%, 93%);
 }
 .text-bright-red {
   color: hsl(12, 88%, 59%);
