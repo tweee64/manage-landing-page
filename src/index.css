@@ -53,23 +53,34 @@ body {
   text-align: center;
   position: relative;
 }
-.profile-pic {
+
+.carousel .slide img {
+  width: 25% !important;
   position: absolute;
-  top: -25px;
-  left: 210px;
-  width: 50px;
-  height: 50px;
+  top: 0;
+  left: 0;
+  margin-top: -50px;
+  left: 120px;
+  z-index: 1000;
+}
+.card-carousel {
+  width: 350px;
+  height: 150px;
+  background-color: aqua;
+  position: relative;
+  display: inline-block;
 }
 .footer-orange {
   height: 170px;
 }
 .footer-black {
   background-color: hsl(233, 12%, 13%);
-  height: 170px;
+  /* height: 170px;
   display: flex;
   justify-content: space-around;
-  padding: 40px;
+  padding: 40px; */
 }
+
 .dark-blue {
   color: hsl(228, 39%, 23%);
 }

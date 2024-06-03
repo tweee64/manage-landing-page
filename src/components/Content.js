@@ -4,6 +4,9 @@ import {
   avatar_anisha,
   avatar_richard,
 } from "../assets";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 import { styles } from "../styles";
 import CarouselCard from "./CarouselCard";
 function Content() {
@@ -93,12 +96,11 @@ function Content() {
           </div>
         </div>
       </div>
-      <CarouselCard />
 
       <div className="my-5 py-5">
         <h1 className="text-center text-3xl font-bolded">What they've said </h1>
-        <div className="grid grid-cols-3 gap-4 py-5 my-5">
-          <div className="card">
+        <div className="">
+          {/* <div className="card">
             <img className="profile-pic" src={avatar_anisha} alt="avt" />
 
             <h2 className="pt-5 pb-3"> Anisha Li </h2>
@@ -125,7 +127,39 @@ function Content() {
               organized and focused. I can’t stop recommending them to everyone
               I talk to!”
             </p>
-          </div>
+          </div> */}
+          <Carousel showThumbs={false} className="flex items-center m-6">
+            <div className="card">
+              <img src={avatar_anisha} alt="avt" />
+              <h2 className="pt-5 pb-3"> Anisha Li </h2>
+              <p className={`${styles.subText}`}>
+                “Manage has supercharged our team’s workflow. The ability to
+                maintain visibility on larger milestones at all times keeps
+                everyone motivated.”
+              </p>
+            </div>
+
+            <div className="card">
+              <img className="profile-pic" src={avatar_anisha} alt="avt" />
+
+              <h2 className="pt-5 pb-3"> Anisha Li </h2>
+              <p className={`${styles.subText}`}>
+                “Manage has supercharged our team’s workflow. The ability to
+                maintain visibility on larger milestones at all times keeps
+                everyone motivated.”
+              </p>
+            </div>
+            <div className="card">
+              <img className="profile-pic" src={avatar_anisha} alt="avt" />
+
+              <h2 className="pt-5 pb-3"> Anisha Li </h2>
+              <p className={`${styles.subText}`}>
+                “Manage has supercharged our team’s workflow. The ability to
+                maintain visibility on larger milestones at all times keeps
+                everyone motivated.”
+              </p>
+            </div>
+          </Carousel>
         </div>
         <div className="flex justify-center">
           <div className={`${styles.button}`}>Get Started</div>

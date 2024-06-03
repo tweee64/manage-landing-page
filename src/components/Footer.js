@@ -59,20 +59,24 @@ function Footer() {
   };
   return (
     <div>
-      <div className="bright-red footer-orange flex justify-around p-10">
-        <div className="w-1/3 pr-20 ">
-          <h1 className=" text-3xl font-bolded text-white ">
+      <div className="bright-red md:h-44 h-64 flex flex-col justify md:flex-row md:justify-around p-10">
+        <div className="text-center md:text-left md:w-1/3 md:pr-20 ">
+          <h1 className="  text-3xl font-bolded text-white ">
             Simplify how your team works today.
           </h1>
         </div>
-        <div className="">
+        <div className="flex md:justify-start justify-center">
           <div className={`${styles.buttonWhite}`}>Get Started</div>{" "}
         </div>
       </div>
-      <div className="footer-black text-white text-sm">
-        <div>
-          <img className="text-white" src={logo} alt="logo" />
-          <div className="mt-10 flex ">
+      <div className="footer-black h-fit p-10 flex flex-col-reverse md:flex-row content-between justify-around text-white text-sm">
+        <div className="pt-5 w-full md:w-fit h-full justify-between md:pt-0 flex-col-reverse  flex md:flex-col items-center ">
+          <img
+            className="text-white w-1/2 md:w-fit pt-5 md:pt-0"
+            src={logo}
+            alt="logo"
+          />
+          <div className="md:mt-10 flex w-full justify-between  ">
             <img className="pr-2" src={icon_facebook} alt="fb" />
             <img className="pr-2" src={icon_youtube} alt="yt" />
             <img className="pr-2" src={icon_twitter} alt="tt" />
@@ -80,21 +84,27 @@ function Footer() {
             <img className="pr-2" src={icon_instagram} alt="instagram" />
           </div>
         </div>
-        <div>
-          <p className="p-1">Home</p>
-          <p className="p-1">Pricing</p>
-          <p className="p-1">Products</p>
-          <p className="p-1">About Us</p>
+        <div className="flex md:w-1/5 px-5  py-3 md:py-0 justify-between">
+          <div>
+            <p className="p-1">Home</p>
+            <p className="p-1">Pricing</p>
+            <p className="p-1">Products</p>
+            <p className="p-1">About Us</p>
+          </div>
+          <div>
+            {" "}
+            <p className="p-1">Careers</p>
+            <p className="p-1">Community</p>
+            <p className="p-1">Privacy Policy</p>
+          </div>
         </div>
         <div>
-          {" "}
-          <p className="p-1">Careers</p>
-          <p className="p-1">Community</p>
-          <p className="p-1">Privacy Policy</p>
-        </div>
-        <div>
-          <form ref={formRef} onSubmit={handleSubmit}>
-            <label>
+          <form
+            className="flex justify-between"
+            ref={formRef}
+            onSubmit={handleSubmit}
+          >
+            <label className="flex self-center">
               <input
                 className="rounded-2xl h-8 w-48 text-black text-sm pl-2"
                 placeholder="Updates in your inbox…
